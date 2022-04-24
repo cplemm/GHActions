@@ -1,0 +1,12 @@
+name: Pluralsight pipeline
+on: 
+  workflow_dispatch:
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: 'echo "Job was triggered by event: ${{ github.event_name }}"'
+      - run: 'echo "Branch name: ${{ github.ref }}"'
+      - run: 'echo "Repo: ${{ github.repository }}"'
+      - uses: actions/checkout@v3
+      - run: 'echo "Repo has been checked out to: ${{ github.workspace }} on the runner"'
