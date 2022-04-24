@@ -15,3 +15,5 @@ jobs:
         with:
           dotnet-version: 6.0.201
       - run: dotnet --version
+      - run: 'echo "Job Status: ${{ job.status }}"'
+      
