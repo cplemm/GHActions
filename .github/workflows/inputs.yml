@@ -1,0 +1,19 @@
+name: Inputs
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Enter the name'
+        required: true
+        default: 'Fred'
+      deploy:
+        description: 'Deploy code after build (yes/no)'
+        required: false
+        default: 'yes'
+
+jobs:
+  Example-Actions-Job:
+    name: Exploring GH Actions
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Name - ${{ github.event.inputs.name }}"
