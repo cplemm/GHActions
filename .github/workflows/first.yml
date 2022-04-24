@@ -2,7 +2,11 @@ name: first
 on: 
   push:
     branches:
-      - master
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
 jobs:
   job1:
     name: First Job
@@ -11,7 +15,9 @@ jobs:
       - name: Step one
         uses: actions/checkout@v3
       - name: Step two
-        run: env | sort
+        run: |
+          env | sort
+          date
   job2:
     name: Second Job
     needs: job1
@@ -20,5 +26,7 @@ jobs:
       - name: Step one
         uses: actions/checkout@v3
       - name: Step two
-        run: 'Get-ChildItem Env: | Sort-Object Name'
+        run: |
+          'Get-ChildItem Env: | Sort-Object Name'
+          Get-Date
     
