@@ -22,6 +22,7 @@ jobs:
           echo "$OVERRIDE"
           echo "------------------------------------------------------"
           echo "Accessing environment variables using env context"
+          echo "${{ github.actor }}"
           echo "${{ env.WORKSPACE_ENVIRONMENT_VARIABLE }}"
           echo "${{ env.JOB_ENVIRONMENT_VARIABLE }}"
           echo "${{ env.STEP_ENVIRONMENT_VARIABLE }} Not defined"
