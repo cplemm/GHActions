@@ -1,0 +1,15 @@
+name: Child Workflow
+
+on:
+  workflow_call:
+    inputs:
+      username:
+        description: Name of a user
+        required: true
+        type: string
+        
+jobs:
+  PrintUsername:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo User - ${{ inputs.username }}
