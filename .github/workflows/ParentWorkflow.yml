@@ -1,0 +1,10 @@
+name: Parent Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-child-workflow:
+    uses: cplemm/GHActions/.github/workflows/ChildWorkflow.yml@main
+    with: 
+      username: Fred
