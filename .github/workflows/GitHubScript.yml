@@ -12,7 +12,6 @@ jobs:
         with:
           github-token: ${{ github.token }}
           script: |
-            echo "Hello world"
             github.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
