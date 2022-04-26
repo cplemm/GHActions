@@ -16,4 +16,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run tests
+        if: ${{ always() }}
         run: npm test
