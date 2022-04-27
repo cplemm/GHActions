@@ -9,6 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Custom Action
-        uses: ./actions/action.yml
+        uses: ./actions
         with:
           who-to-greet: 'this is a custom action...'
