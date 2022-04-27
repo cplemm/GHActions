@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Custom Action
-        uses: ./actions/action.yml@main
+        uses: ./actions/action.yml
         with:
           who-to-greet: 'this is a custom action...'
